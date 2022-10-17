@@ -1,0 +1,176 @@
+.container {
+  width: 100%;
+  max-width: 736px;
+  margin: auto;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.info div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--blue);
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px;
+  gap: 10px;
+  width: max-content;
+  height: auto;
+  color: var(--gray-200);
+  background: var(--gray-400);
+  border-radius: 999px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+
+  width: 736px;
+  height: 408px;
+
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 12px;
+
+  width: 736px;
+  height: 72px;
+
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.btnCheckCompleted {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--gray-100);
+  outline: 0;
+  line-height: 0;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: 0 0 0 2px var(--blue) inset;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnCheckCompleted:not(.completed):hover {
+  box-shadow: 0 0 0 2px var(--blue) inset;
+  background: var(--blue-dark);
+  opacity: 0.2;
+}
+
+.btnCheckCompleted.completed {
+  background: var(--purple-dark);
+  box-shadow: 0 0 0 2px var(--purple-dark) inset;
+}
+.btnCheckCompleted.completed:hover {
+  background: var(--purple);
+  box-shadow: 0 0 0 2px var(--purple) inset;
+}
+
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  width: 632px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--gray-100);
+  overflow: auto;
+}
+
+.text.isCompleted {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.btnTrash {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0;
+  line-height: 0;
+  cursor: pointer;
+  background: transparent;
+  transition: 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnTrash:hover {
+  border-radius: 4px;
+  background: var(--gray-400);
+}
+
+.trashIcon {
+  font-size: 1rem;
+  color: var(--gray-300);
+}
+
+.btnTrash:hover .trashIcon {
+  color: var(--danger);
+}
+
+.empty {
+  width: 100%;
+  border-radius: 8px;
+  border-top: 1px solid var(--gray-400);
+}
+
+.empty .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 4rem;
+  color: var(--gray-300);
+}
+
+.empty .content > svg {
+  color: var(--gray-400);
+}
+
+.empty .content > p {
+  margin-top: 16px;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: center;
+}
+
+.empty .content > p > span {
+  font-weight: 400;
+}
